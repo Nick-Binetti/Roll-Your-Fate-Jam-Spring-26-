@@ -23,3 +23,9 @@ position = Vector2(961, 535)
 position = Vector2(-350, 535)
 scale = Vector2(1.261, 1.33)
 texture = ExtResource("1_3mqji")
+
+[node name="AppCounter" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 36
+text = "Applications Submitted: 0"

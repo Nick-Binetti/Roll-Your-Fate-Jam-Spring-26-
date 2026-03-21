@@ -10,8 +10,3 @@ func _on_LineEdit_text_submitted(new_text: String):
 	var email_label: Label = $"../EmailText"
 	email_label.text = name_text + "@hellscape.com"
 	print(name_text)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

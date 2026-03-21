@@ -1,0 +1,324 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct5ckemdglpaq"]
+
+[ext_resource type="Texture2D" uid="uid://cobh2sopvxmvl" path="res://Employment-Job-Application-550x712.webp" id="1_g7n4r"]
+[ext_resource type="Script" uid="uid://cw5rtd2od0a0s" path="res://name_text_box.gd" id="2_hl2u1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4av3"]
+bg_color = Color(0.455361, 0.67029, 0.339383, 1)
+
+[node name="Employment-job-application" type="Sprite2D"]
+scale = Vector2(1.295, 1.33)
+texture = ExtResource("1_g7n4r")
+
+[node name="NameTextBox" type="LineEdit" parent="."]
+offset_left = -140.178
+offset_top = -266.45
+offset_right = -40.1777
+offset_bottom = -224.45
+scale = Vector2(0.797712, 0.840001)
+theme_override_font_sizes/font_size = 18
+script = ExtResource("2_hl2u1")
+
+[node name="PayTextBox" type="LineEdit" parent="."]
+offset_left = 75.2663
+offset_top = -130.36
+offset_right = 143.829
+offset_bottom = -99.3602
+theme_override_font_sizes/font_size = 16
+
+[node name="HsTextBox" type="LineEdit" parent="."]
+offset_left = -128.958
+offset_top = 157.143
+offset_right = -60.395
+offset_bottom = 188.143
+theme_override_font_sizes/font_size = 12
+
+[node name="CollegeTextBox" type="LineEdit" parent="."]
+offset_left = -155.212
+offset_top = 229.323
+offset_right = -86.6498
+offset_bottom = 260.323
+theme_override_font_sizes/font_size = 12
+
+[node name="AddressText" type="Label" parent="."]
+z_index = 1
+offset_left = -148.672
+offset_top = -223.593
+offset_right = -22.672
+offset_bottom = -200.593
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "666 Avarice Way"
+
+[node name="EmailText" type="Label" parent="."]
+offset_left = -147.128
+offset_top = -164.947
+offset_right = -22.1275
+offset_bottom = -141.947
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 0
+
+[node name="CityStateText" type="Label" parent="."]
+z_index = 1
+offset_left = -149.444
+offset_top = -195.774
+offset_right = 25.5558
+offset_bottom = -172.774
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Hades                       Hell"
+
+[node name="ZipText" type="Label" parent="."]
+offset_left = 110.015
+offset_top = -195.774
+offset_right = 156.015
+offset_bottom = -172.774
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "41317"
+
+[node name="SsnText" type="Label" parent="."]
+offset_left = -35.1584
+offset_top = -137.127
+offset_right = 84.8416
+offset_bottom = -114.127
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "666    13     3914"
+
+[node name="PhoneText" type="Label" parent="."]
+offset_left = 94.5713
+offset_top = -161.939
+offset_right = 196.571
+offset_bottom = -138.939
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "576-666-6741"
+
+[node name="DateLabel" type="Label" parent="."]
+offset_left = 113.104
+offset_top = -255.172
+offset_right = 190.104
+offset_bottom = -232.172
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "3/22/2026"
+
+[node name="NOW" type="Label" parent="."]
+offset_left = -119.328
+offset_top = -116.074
+offset_right = 59.6717
+offset_bottom = -93.0744
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = " NOW PLEASEEEE"
+
+[node name="ProbablyText" type="Label" parent="."]
+offset_left = 94.2086
+offset_top = 18.797
+offset_right = 163.209
+offset_bottom = 41.797
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Probably"
+
+[node name="FelonyText" type="Label" parent="."]
+offset_left = -76.4479
+offset_top = 100.752
+offset_right = 87.5521
+offset_bottom = 123.752
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Murder, Arson, Stealing, etc."
+
+[node name="HsDateText" type="Label" parent="."]
+offset_left = -150.579
+offset_top = 192.481
+offset_right = 38.4209
+offset_bottom = 215.481
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "530 B.C                                 535 B.C"
+
+[node name="CollegeDateText" type="Label" parent="."]
+offset_left = -153.668
+offset_top = 257.143
+offset_right = 35.332
+offset_bottom = 280.143
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "2 B.C                                 0 A.C"
+
+[node name="HsCityStateText" type="Label" parent="."]
+offset_left = 75.6757
+offset_top = 172.18
+offset_right = 141.676
+offset_bottom = 195.18
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Hades, Hell"
+
+[node name="CollegeCityStateText" type="Label" parent="."]
+offset_left = 63.3205
+offset_top = 234.586
+offset_right = 129.32
+offset_bottom = 257.586
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
+text = "Hades, Hell"
+
+[node name="SubmitButton" type="Button" parent="."]
+offset_left = 136.27
+offset_top = 290.692
+offset_right = 261.27
+offset_bottom = 345.692
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_x4av3")
+text = "Submit"
+
+[node name="CheckMark" type="ColorRect" parent="."]
+offset_left = -81.4905
+offset_top = -64.1947
+offset_right = -41.4905
+offset_bottom = -24.1947
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark2" type="ColorRect" parent="."]
+offset_left = -81.4905
+offset_top = -61.1872
+offset_right = -41.4905
+offset_bottom = -21.1872
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark3" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.3524
+offset_top = -63.1903
+offset_right = 11.6476
+offset_bottom = -23.1903
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark4" type="ColorRect" parent="."]
+z_index = 1
+offset_left = -28.239
+offset_top = -63.2921
+offset_right = 11.761
+offset_bottom = -23.2921
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark5" type="ColorRect" parent="."]
+offset_left = 24.9553
+offset_top = -63.1904
+offset_right = 64.9553
+offset_bottom = -23.1904
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark6" type="ColorRect" parent="."]
+offset_left = 25.0429
+offset_top = -63.2668
+offset_right = 65.0429
+offset_bottom = -23.2668
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark7" type="ColorRect" parent="."]
+offset_left = -50.1679
+offset_top = 5.9418
+offset_right = -10.1679
+offset_bottom = 45.9418
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark8" type="ColorRect" parent="."]
+offset_left = -50.1679
+offset_top = 8.9493
+offset_right = -10.1679
+offset_bottom = 48.9493
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark9" type="ColorRect" parent="."]
+offset_left = 71.0676
+offset_top = 48.0471
+offset_right = 111.068
+offset_bottom = 88.0471
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark10" type="ColorRect" parent="."]
+offset_left = 71.0676
+offset_top = 51.0546
+offset_right = 111.068
+offset_bottom = 91.0546
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark11" type="ColorRect" parent="."]
+offset_left = 43.2684
+offset_top = 88.6486
+offset_right = 83.2684
+offset_bottom = 128.649
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark12" type="ColorRect" parent="."]
+offset_left = 43.2684
+offset_top = 91.6561
+offset_right = 83.2684
+offset_bottom = 131.656
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark13" type="ColorRect" parent="."]
+offset_left = -145.262
+offset_top = 226.243
+offset_right = -105.262
+offset_bottom = 266.243
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark14" type="ColorRect" parent="."]
+offset_left = -145.149
+offset_top = 226.344
+offset_right = -105.149
+offset_bottom = 266.344
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark15" type="ColorRect" parent="."]
+offset_left = -114.067
+offset_top = 287.937
+offset_right = -74.0667
+offset_bottom = 327.937
+rotation = -0.841733
+scale = Vector2(0.400806, 0.0505265)
+color = Color(0, 0, 0, 1)
+
+[node name="CheckMark16" type="ColorRect" parent="."]
+offset_left = -113.953
+offset_top = 287.836
+offset_right = -73.9532
+offset_bottom = 327.836
+rotation = -2.30146
+scale = Vector2(0.203431, 0.0506683)
+color = Color(0, 0, 0, 1)

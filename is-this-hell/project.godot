@@ -11,10 +11,18 @@ config_version=5
 [application]
 
 config/name="Is This Hell"
+run/main_scene="uid://dbklvdfsxen4t"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.5168, 0.183362, 0.160673, 1)

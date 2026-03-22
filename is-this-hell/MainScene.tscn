@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbklvdfsxen4t"]
+[gd_scene load_steps=11 format=3 uid="uid://dbklvdfsxen4t"]
 
 [ext_resource type="Script" uid="uid://c2pgcmiw2l5cl" path="res://main_scene.gd" id="1_x4av3"]
 [ext_resource type="PackedScene" uid="uid://ct5ckemdglpaq" path="res://employment_job_application.tscn" id="2_rpqi1"]
+[ext_resource type="Texture2D" uid="uid://cg6sj616cs2pg" path="res://jobofferemail2.webp" id="4_rf2cd"]
 [ext_resource type="PackedScene" uid="uid://xcmu7vhvyk1w" path="res://job_rejection_email_visual.tscn" id="4_uxrcv"]
 
 [sub_resource type="Animation" id="Animation_uxrcv"]
@@ -11,6 +12,17 @@ resource_name = "JobAppSlide"
 _data = {
 &"JobAppSlide": SubResource("Animation_uxrcv")
 }
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uxrcv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rf2cd"]
+bg_color = Color(0.670588, 0.847059, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a814b"]
+bg_color = Color(0.0627451, 0.376471, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5crlr"]
+bg_color = Color(0.454902, 0.670588, 0.341176, 1)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_x4av3")
@@ -40,3 +52,20 @@ position = Vector2(968, 537)
 libraries = {
 &"": SubResource("AnimationLibrary_rf2cd")
 }
+
+[node name="Job-offer-email" type="Sprite2D" parent="."]
+position = Vector2(1002, 540)
+texture = ExtResource("4_rf2cd")
+
+[node name="WinButton" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 50)
+offset_left = 1235.0
+offset_top = 718.0
+offset_right = 1385.0
+offset_bottom = 768.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/disabled = SubResource("StyleBoxFlat_uxrcv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rf2cd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a814b")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5crlr")
+text = "Finally"

@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbklvdfsxen4t"]
+[gd_scene load_steps=6 format=3 uid="uid://dbklvdfsxen4t"]
 
-[ext_resource type="Texture2D" uid="uid://cobh2sopvxmvl" path="res://Employment-Job-Application-550x712.webp" id="1_3mqji"]
 [ext_resource type="Script" uid="uid://c2pgcmiw2l5cl" path="res://main_scene.gd" id="1_x4av3"]
 [ext_resource type="PackedScene" uid="uid://ct5ckemdglpaq" path="res://employment_job_application.tscn" id="2_rpqi1"]
+[ext_resource type="PackedScene" uid="uid://xcmu7vhvyk1w" path="res://job_rejection_email_visual.tscn" id="4_uxrcv"]
+
+[sub_resource type="Animation" id="Animation_uxrcv"]
+resource_name = "JobAppSlide"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rf2cd"]
+_data = {
+&"JobAppSlide": SubResource("Animation_uxrcv")
+}
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_x4av3")
@@ -17,15 +25,18 @@ offset_bottom = -265.0
 scale = Vector2(13.7174, 17.9268)
 
 [node name="Employment-job-application" parent="." instance=ExtResource("2_rpqi1")]
-position = Vector2(961, 535)
-
-[node name="Employment-job-application-550x713" type="Sprite2D" parent="."]
-position = Vector2(-350, 535)
-scale = Vector2(1.261, 1.33)
-texture = ExtResource("1_3mqji")
 
 [node name="AppCounter" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_right = 444.0
+offset_bottom = 50.0
 theme_override_font_sizes/font_size = 36
 text = "Applications Submitted: 0"
+
+[node name="Job-rejection-email-visual" parent="." instance=ExtResource("4_uxrcv")]
+visible = false
+position = Vector2(968, 537)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rf2cd")
+}

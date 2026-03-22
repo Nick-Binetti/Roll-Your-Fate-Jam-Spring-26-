@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://xcmu7vhvyk1w"]
+
+[ext_resource type="Texture2D" uid="uid://dkv21fcas0xnk" path="res://job-rejection-email-visual.jpg" id="1_8qua2"]
+[ext_resource type="Script" uid="uid://cj0flsvldk207" path="res://accept_button.gd" id="2_ft4ij"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ft4ij"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xg5hv"]
+bg_color = Color(0.670588, 0.847059, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc61a"]
+bg_color = Color(0.0627451, 0.376471, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67qvf"]
+bg_color = Color(0.455361, 0.67029, 0.339383, 1)
+
+[node name="Job-rejection-email-visual" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8qua2")
+
+[node name="AcceptButton" type="Button" parent="."]
+custom_minimum_size = Vector2(400, 200)
+offset_left = 666.0
+offset_top = 594.0
+offset_right = 1066.0
+offset_bottom = 794.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+theme_override_styles/disabled = SubResource("StyleBoxFlat_ft4ij")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xg5hv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kc61a")
+theme_override_styles/normal = SubResource("StyleBoxFlat_67qvf")
+text = "Ok"
+script = ExtResource("2_ft4ij")
+
+[connection signal="hidden" from="." to="AcceptButton" method="_on_jobrejectionemailvisual_hidden"]
+[connection signal="pressed" from="AcceptButton" to="AcceptButton" method="_on_pressed"]

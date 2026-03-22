@@ -1,9 +1,13 @@
 extends Button
 
-var appCount = 0
-@onready var appLabel = $"../../AppCounter"
+@onready var rejection = $"../../Job-rejection-email-visual"
+@onready var jobApp = $"../../Employment-job-application"
 
 func _on_pressed() -> void:
-	appCount += 1
-	print(appCount)
-	appLabel.text = "Applications Submitted: %d" % appCount
+	Global.appCount += 1
+	print(Global.appCount)
+	#delete job app
+	jobApp.queue_free()
+	#random logic 1%
+	rejection.show()
+	

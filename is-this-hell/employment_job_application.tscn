@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://ct5ckemdglpaq"]
+[gd_scene load_steps=13 format=3 uid="uid://ct5ckemdglpaq"]
 
 [ext_resource type="Texture2D" uid="uid://cobh2sopvxmvl" path="res://Employment-Job-Application-550x712.webp" id="1_g7n4r"]
 [ext_resource type="Script" uid="uid://2x5uct0aajj" path="res://validation.gd" id="2_5fywi"]
 [ext_resource type="Script" uid="uid://cw5rtd2od0a0s" path="res://name_text_box.gd" id="2_hl2u1"]
 [ext_resource type="Script" uid="uid://5vs7w6a64i7d" path="res://submit_button.gd" id="3_hl2u1"]
+[ext_resource type="FontFile" uid="uid://jcejqtg25rgx" path="res://FingerPaint-Regular.ttf" id="3_jrjui"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrjui"]
 
@@ -15,21 +16,6 @@ bg_color = Color(0.0627451, 0.376471, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4av3"]
 bg_color = Color(0.455361, 0.67029, 0.339383, 1)
-
-[sub_resource type="Animation" id="Animation_5fywi"]
-resource_name = "start_effect"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 535), Vector2(961, 535)]
-}
 
 [sub_resource type="Animation" id="Animation_jrjui"]
 length = 0.001
@@ -44,6 +30,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5fywi"]
+resource_name = "start_effect"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 535), Vector2(961, 535)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wbp3g"]
@@ -63,14 +64,17 @@ offset_top = -266.45
 offset_right = -40.1777
 offset_bottom = -224.45
 scale = Vector2(0.797712, 0.840001)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 18
 script = ExtResource("2_hl2u1")
 
 [node name="PayTextBox" type="LineEdit" parent="."]
+custom_minimum_size = Vector2(125, 0)
 offset_left = 75.2663
 offset_top = -130.36
 offset_right = 143.829
 offset_bottom = -99.3602
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 16
 
 [node name="HsTextBox" type="LineEdit" parent="."]
@@ -78,6 +82,7 @@ offset_left = -128.958
 offset_top = 157.143
 offset_right = -60.395
 offset_bottom = 188.143
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 
 [node name="CollegeTextBox" type="LineEdit" parent="."]
@@ -85,14 +90,16 @@ offset_left = -155.212
 offset_top = 229.323
 offset_right = -86.6498
 offset_bottom = 260.323
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 
 [node name="EmailText" type="Label" parent="."]
-offset_left = -147.128
-offset_top = -164.947
-offset_right = -22.1275
-offset_bottom = -141.947
+offset_left = -162.934
+offset_top = -165.414
+offset_right = -37.9339
+offset_bottom = -140.414
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 0
 
 [node name="SsnText" type="Label" parent="."]
@@ -101,6 +108,7 @@ offset_top = -137.127
 offset_right = 84.8416
 offset_bottom = -114.127
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "666    13     3914"
 
@@ -110,6 +118,7 @@ offset_top = -195.774
 offset_right = 156.015
 offset_bottom = -172.774
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 16
 text = "41317"
 
@@ -119,6 +128,7 @@ offset_top = -223.308
 offset_right = -23.035
 offset_bottom = -200.308
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 16
 text = "666 Avarice Way"
 
@@ -128,6 +138,7 @@ offset_top = -161.654
 offset_right = 196.208
 offset_bottom = -138.654
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "576-666-6741"
 
@@ -137,6 +148,7 @@ offset_top = -195.489
 offset_right = 25.1928
 offset_bottom = -172.489
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 16
 text = "Hades                       Hell"
 
@@ -146,6 +158,7 @@ offset_top = -255.172
 offset_right = 190.104
 offset_bottom = -232.172
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 16
 text = "3/22/2026"
 
@@ -155,6 +168,7 @@ offset_top = -116.074
 offset_right = 59.6717
 offset_bottom = -93.0744
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = " NOW PLEASEEEE"
 
@@ -164,6 +178,7 @@ offset_top = 18.797
 offset_right = 163.209
 offset_bottom = 41.797
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "Probably"
 
@@ -173,6 +188,7 @@ offset_top = 100.752
 offset_right = 87.5521
 offset_bottom = 123.752
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "Murder, Arson, Stealing, etc."
 
@@ -182,6 +198,7 @@ offset_top = 192.481
 offset_right = 38.4209
 offset_bottom = 215.481
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "530 B.C                                 535 B.C"
 
@@ -191,6 +208,7 @@ offset_top = 257.143
 offset_right = 35.332
 offset_bottom = 280.143
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "2 B.C                                 0 A.C"
 
@@ -200,6 +218,7 @@ offset_top = 172.18
 offset_right = 141.676
 offset_bottom = 195.18
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "Hades, Hell"
 
@@ -209,6 +228,7 @@ offset_top = 234.586
 offset_right = 129.32
 offset_bottom = 257.586
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 12
 text = "Hades, Hell"
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Is This Hell"
-run/main_scene="uid://dbklvdfsxen4t"
+run/main_scene="uid://duvcugrldea5g"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

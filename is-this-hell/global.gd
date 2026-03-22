@@ -5,3 +5,5 @@ extends Node
 signal okButton_pressed
 
 var appCount = 0
+
+var playerName:String

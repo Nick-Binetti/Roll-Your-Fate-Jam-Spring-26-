@@ -1,7 +1,52 @@
-[gd_scene format=3 uid="uid://bt3pgly54khwk"]
+[gd_scene load_steps=7 format=3 uid="uid://bt3pgly54khwk"]
+
+[ext_resource type="FontFile" uid="uid://jcejqtg25rgx" path="res://FingerPaint-Regular.ttf" id="1_t3pix"]
+[ext_resource type="Script" uid="uid://eum61ytaapnb" path="res://main_menu_button.gd" id="2_uuemd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wcsh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t3pix"]
+bg_color = Color(0.670588, 0.847059, 0.580392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uuemd"]
+bg_color = Color(0.0627451, 0.376471, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4jwh"]
+bg_color = Color(0.454902, 0.670588, 0.341176, 1)
 
 [node name="WinScene" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 676.0
+offset_top = 73.0
+offset_right = 1286.0
+offset_bottom = 221.0
+theme_override_fonts/font = ExtResource("1_t3pix")
+theme_override_font_sizes/font_size = 108
+text = "You've Won"
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = -504.0
+offset_top = 188.0
+offset_right = 1113.0
+offset_bottom = 336.0
+theme_override_fonts/font = ExtResource("1_t3pix")
+theme_override_font_sizes/font_size = 86
+text = "Time to grind the coporate ladder!!!"
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="."]
+offset_left = 770.0
+offset_top = 671.0
+offset_right = 1175.0
+offset_bottom = 778.0
+theme_override_fonts/font = ExtResource("1_t3pix")
+theme_override_font_sizes/font_size = 72
+theme_override_styles/disabled = SubResource("StyleBoxFlat_3wcsh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t3pix")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uuemd")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j4jwh")
+text = "Main Menu"
+script = ExtResource("2_uuemd")
+
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_pressed"]

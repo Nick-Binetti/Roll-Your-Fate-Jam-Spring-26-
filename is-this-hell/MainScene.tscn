@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://dbklvdfsxen4t"]
+[gd_scene load_steps=13 format=3 uid="uid://dbklvdfsxen4t"]
 
 [ext_resource type="Script" uid="uid://c2pgcmiw2l5cl" path="res://main_scene.gd" id="1_x4av3"]
 [ext_resource type="PackedScene" uid="uid://ct5ckemdglpaq" path="res://employment_job_application.tscn" id="2_rpqi1"]
 [ext_resource type="Texture2D" uid="uid://cg6sj616cs2pg" path="res://jobofferemail2.webp" id="4_rf2cd"]
 [ext_resource type="PackedScene" uid="uid://xcmu7vhvyk1w" path="res://job_rejection_email_visual.tscn" id="4_uxrcv"]
+[ext_resource type="FontFile" uid="uid://jcejqtg25rgx" path="res://FingerPaint-Regular.ttf" id="5_a814b"]
+[ext_resource type="Script" uid="uid://bquxnj1aakes0" path="res://win_button.gd" id="5_rf2cd"]
 
 [sub_resource type="Animation" id="Animation_uxrcv"]
 resource_name = "JobAppSlide"
@@ -39,8 +41,10 @@ scale = Vector2(13.7174, 17.9268)
 [node name="Employment-job-application" parent="." instance=ExtResource("2_rpqi1")]
 
 [node name="AppCounter" type="Label" parent="."]
-offset_right = 444.0
-offset_bottom = 50.0
+offset_left = 16.0
+offset_right = 515.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("5_a814b")
 theme_override_font_sizes/font_size = 36
 text = "Applications Submitted: 0"
 
@@ -54,18 +58,39 @@ libraries = {
 }
 
 [node name="Job-offer-email" type="Sprite2D" parent="."]
-position = Vector2(1002, 540)
+visible = false
+position = Vector2(998, 579)
 texture = ExtResource("4_rf2cd")
 
-[node name="WinButton" type="Button" parent="."]
+[node name="WinButton" type="Button" parent="Job-offer-email"]
 custom_minimum_size = Vector2(150, 50)
-offset_left = 1235.0
-offset_top = 718.0
-offset_right = 1385.0
-offset_bottom = 768.0
+offset_left = 233.0
+offset_top = 178.0
+offset_right = 383.0
+offset_bottom = 228.0
+theme_override_fonts/font = ExtResource("5_a814b")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/disabled = SubResource("StyleBoxFlat_uxrcv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_rf2cd")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_a814b")
 theme_override_styles/normal = SubResource("StyleBoxFlat_5crlr")
 text = "Finally"
+script = ExtResource("5_rf2cd")
+
+[node name="ColorRect" type="ColorRect" parent="Job-offer-email"]
+offset_left = -245.0
+offset_top = -90.0
+offset_right = -205.0
+offset_bottom = -50.0
+scale = Vector2(14.28, 1.24)
+color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="NameLabel" type="Label" parent="Job-offer-email"]
+offset_left = -242.0
+offset_top = -92.0
+offset_right = -186.0
+offset_bottom = -42.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+
+[connection signal="pressed" from="Job-offer-email/WinButton" to="Job-offer-email/WinButton" method="_on_pressed"]

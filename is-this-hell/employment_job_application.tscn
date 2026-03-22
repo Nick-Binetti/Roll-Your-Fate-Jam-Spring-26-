@@ -59,10 +59,11 @@ texture = ExtResource("1_g7n4r")
 script = ExtResource("2_5fywi")
 
 [node name="NameTextBox" type="LineEdit" parent="."]
-offset_left = -140.178
-offset_top = -266.45
-offset_right = -40.1777
-offset_bottom = -224.45
+custom_minimum_size = Vector2(250, 0)
+offset_left = -145.174
+offset_top = -266.917
+offset_right = 104.826
+offset_bottom = -224.917
 scale = Vector2(0.797712, 0.840001)
 theme_override_fonts/font = ExtResource("3_jrjui")
 theme_override_font_sizes/font_size = 18
@@ -173,13 +174,14 @@ theme_override_font_sizes/font_size = 12
 text = " NOW PLEASEEEE"
 
 [node name="ProbablyText" type="Label" parent="."]
-offset_left = 94.2086
-offset_top = 18.797
-offset_right = 163.209
-offset_bottom = 41.797
+offset_left = 89.5753
+offset_top = 8.27068
+offset_right = 158.576
+offset_bottom = 31.2707
+rotation = -0.186773
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_jrjui")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 14
 text = "Probably"
 
 [node name="FelonyText" type="Label" parent="."]
@@ -395,6 +397,16 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_wbp3g")
 }
+
+[node name="PositionLabel" type="Label" parent="."]
+offset_left = -84.9421
+offset_top = -97.7444
+offset_right = 48.0579
+offset_bottom = -74.7444
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jrjui")
+theme_override_font_sizes/font_size = 14
+text = "Software Engineer"
 
 [connection signal="text_changed" from="NameTextBox" to="." method="_on_name_text_box_text_changed"]
 [connection signal="text_changed" from="PayTextBox" to="." method="_on_pay_text_box_text_changed"]
